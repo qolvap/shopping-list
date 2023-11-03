@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
-	// each "item" in our list names a name, a boolean to tell if its been completed, and a quantity
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [totalItemCount, setTotalItemCount] = useState(0);
