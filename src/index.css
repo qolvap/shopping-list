@@ -1,5 +1,5 @@
 * {
-  font-size: 36px;
+  font-size: 25px;
 }
 
 body {
@@ -23,10 +23,10 @@ body {
 }
 
 .main-container {
-  background-color: #ec645b;
-  width: 500px;
+  background-color: #EEF0F4;
+  max-width: 320px;
   height: min-content;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
 }
@@ -43,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  padding: 5px;
+  padding: 3px;
 }
 
 .add-item-box svg {
@@ -65,10 +65,20 @@ input::placeholder {
 input:focus {
   outline: 0;
 }
+.add-item-box:hover{
+  border: 3px solid #ec645b;
+}
+
+.add-item-btn:hover{
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  color: whitesmoke;
+}
 
 .item-list {
   display: flex;
   flex-direction: column;
+  color: #ec645b;
 }
 
 .item-container {
@@ -83,6 +93,10 @@ input:focus {
   cursor: pointer;
 }
 
+.item-name:hover{
+  color: #fbc1bb;
+}
+
 .item-name svg {
   margin-left: 5px;
   margin-right: 5px;
@@ -92,6 +106,7 @@ input:focus {
   /* width: 30%; */
   display: flex;
   justify-content: space-between;
+  max-width: 100px;
 }
 
 .remove-button {
@@ -102,6 +117,7 @@ input:focus {
 .total {
   float: right;
   padding: 10px;
+  color: #ec645b;
 }
 
 .quantity {
@@ -114,6 +130,9 @@ input:focus {
   color: #ec645b;
   min-width: 70px;
   justify-content: space-between;
+}
+.quantity:hover{
+  border: 3px solid #ec645b;
 }
 
 button {
@@ -132,4 +151,5 @@ button:hover {
 
 .completed {
   text-decoration: line-through;
+  color: #fbc1bb;
 }
