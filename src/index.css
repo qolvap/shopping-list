@@ -17,9 +17,11 @@ body {
 .app-background {
   background-color: #bee3ff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  gap: 10px;
 }
 
 .main-container {
@@ -29,6 +31,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
+  margin: 20px; 
 }
 
 .title {
@@ -114,10 +117,19 @@ input:focus {
   background-color: red;
 }
 
-.total {
+.total{
   float: right;
   padding: 10px;
   color: #ec645b;
+}
+
+.delete-btn {
+  color: #fbc1bb;
+}
+
+.delete-btn:hover {
+  color: #ec645b;
+  cursor: pointer;
 }
 
 .quantity {

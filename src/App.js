@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -71,8 +71,18 @@ const App = () => {
      }
   }
 
+  // handleClearAll() fn deletes all the items added to items arr
+  const handleClearAll = () => {
+    setItems([]); // seting the items state for a empty arr
+    setTotalItemCount(0); // updates the totalItemsCount state to 0
+  };
+  
+
 	return (
 		<div className='app-background'>
+      <div className='name-container'>
+        <h1>Shopping list</h1>
+      </div>
 			<div className='main-container'>
 				<div className='add-item-box'>
 					<input value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} className='add-item-input' placeholder='Add an item...' />
@@ -103,10 +113,14 @@ const App = () => {
 							</button>
 						</div>
 					</div> )}
-					
 				</div>
 				<div className='total'>Total: {totalItemCount}</div>
-			</div>
+        <div className='total' onClick={handleClearAll}>
+        <span className='delete-btn'>
+          <FontAwesomeIcon className='delete-btn' icon={faTrash} />
+        </span>
+        </div>
+      </div>
 		</div>
 	);
 };
